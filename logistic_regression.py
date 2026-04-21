@@ -1,6 +1,8 @@
 ######### Switched from linear to logistic because3
 
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
 from data import data_generator
 
 synthetic_data = data_generator.data
@@ -15,6 +17,9 @@ model = LogisticRegression()
 model.fit(X, y)
 
 predictions = model.predict(X)
+
+print("Checking the accuracy score ::",accuracy_score(y, predictions))
+
 probabilities = model.predict_proba(X)[:, 1]
 
 print(synthetic_data.head())
