@@ -6,7 +6,7 @@ import numpy as np ### numpy is used to deal with numbers
 
 # Why are we seeding with 42 and no other number
 np.random.seed(42)
-n = 5
+n = 100
 
 data = pd.DataFrame({
     "height" : np.random.normal(5.8, 0.3, n),
